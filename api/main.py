@@ -1,6 +1,13 @@
-__import__('pysqlite3')
+# ==========================================
+# CRITICAL: THIS MUST BE THE ABSOLUTE FIRST LINE
+# ==========================================
 import sys
-sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+try:
+    import pysqlite3
+    sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+except ImportError:
+    pass  # Fallback for local environments where pysqlite3 isn't installed
+
 import os
 import httpx
 from fastapi import FastAPI, HTTPException
