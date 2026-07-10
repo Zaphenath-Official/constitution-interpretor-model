@@ -1,0 +1,17 @@
+# Ignore local runtime cache and virtual environments
+__pycache__/
+*.pyc
+.env
+venv/
+.venv/
+
+# Ignore local React items when you create the app folder
+app/node_modules/
+app/build/
+app/dist/
+
+models/llama-3-8b-instruct.Q4_K_M.gguf
+
+# Optional: If your local 'legal_ai_vector_db' folder is larger than 100MB,
+# uncomment the line below to prevent GitHub from rejecting it:
+api/data/legal_ai_vector_db/
