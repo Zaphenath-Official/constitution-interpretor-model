@@ -28,7 +28,7 @@ COLLECTION_NAME = "kenya_legal_documents"
 # Initialize ChromaDB
 embedding_function = embedding_functions.DefaultEmbeddingFunction()
 chroma_client = chromadb.PersistentClient(path=VECTOR_DB_DIR)
-collection = chroma_client.get_collection(
+collection = chroma_client.get_or_create_collection(
     name=COLLECTION_NAME, 
     embedding_function=embedding_function
 )
