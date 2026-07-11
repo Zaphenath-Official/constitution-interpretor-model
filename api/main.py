@@ -32,7 +32,7 @@ app.add_middleware(
 # For Render's persistent disk, we mount it directly to "/var/data" and point there.
 RENDER_DISK_PATH = "/var/data"
 DATA_DIR = RENDER_DISK_PATH if os.path.exists(RENDER_DISK_PATH) else "data"
-VECTOR_DB_DIR = os.path.join(DATA_DIR, "legal_ai_vector_db")
+VECTOR_DB_DIR = os.path.join(DATA_DIR, "db_storage", "legal_ai_vector_db")
 COLLECTION_NAME = "kenya_legal_documents"
 
 # Initialize ChromaDB
