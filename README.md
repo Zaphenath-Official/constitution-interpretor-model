@@ -57,3 +57,22 @@ pip install -r requirements.txt
 
 # Run the FastAPI server
 uvicorn main:app --reload
+```
+### 2. Frontend Setup
+```bash
+cd ../frontend
+npm install
+npm run dev
+```
+## 📁 Repository Structure
+├── backend/
+│   ├── main.py            # FastAPI main application
+│   ├── model.py           # Gemma-2 inference and ChromaDB loading logic
+│   ├── requirements.txt   # Backend dependencies
+│   └── chromadb_store/    # Local vector storage containing the legal corpus
+├── frontend/
+│   ├── src/               # React components and pages
+│   ├── package.json       # Frontend dependencies
+│   └── tailwind.config.js # Tailwind CSS configuration
+└── notebook/
+    └── Unsloth_QLoRA_Fine_Tuning.ipynb # Original training notebook
